@@ -26,7 +26,7 @@ $(function(){
 
 	//слайдер навыков js
 	$('.range').slider({
-		value: 10,
+		value: 5,
 		step: 0.01,
 		min: 0,
 		max: 10,

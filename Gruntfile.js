@@ -157,6 +157,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('build_js', ['concat', 'uglify']);
 	grunt.registerTask('html_validation', ['validation']);
 	grunt.registerTask('svg_concat', ['svgstore']);
-	grunt.registerTask('build', ['pug', 'build_styles', 'build_js']);
+	grunt.registerTask('build', ['pug', 'build_styles', 'build_js', 'svg_concat']);
 	grunt.registerTask('default', ['build', 'watch']);
 };
