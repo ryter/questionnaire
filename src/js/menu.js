@@ -17,7 +17,7 @@ $(function(){
 
 		$(linkHref).animatescroll({
 			scrollSpeed: 1000,
-			padding: 60
+			padding: 30
 		});
 	});
 

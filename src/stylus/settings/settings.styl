@@ -48,35 +48,6 @@ linear-interpolation($map)
 	unquote('calc(' + unit($slope * 100, vw) + ' ' + $sign + ' ' + unit($y-intercept, px) + ')')
 
 //extends
-$blocksPadding
-	padding 70px 0
-	@media screen and (max-width: 1024px)
-		padding 35px
-
-$blackShadow
-	content ''
-	display block
-	position absolute
-	top 0
-	left 0
-	width 100%
-	height 100%
-	background-color $semiBlack
-
-$accentBtn
-	display inline-block
-	border 1px solid $accentColor
-	color $accentColor
-	text-transform uppercase
-	font-weight bold
-	background-color transparent
-	white-space nowrap
-	padding 10px
-	transition all .5s
-	&:hover
-		background-color $accentColor
-		color $white
-
 $clearBoth
 	content ''
 	display block
@@ -116,9 +87,6 @@ $robotoRegular
 
 $robotoThin
 	font-family "Roboto-Thin"
-
-$textUppercase
-	text-transform uppercase
 
 $smallerFontSize
 	@media screen and (min-width: 1170px)
@@ -160,9 +128,6 @@ $transitionDefault
 
 $transitionSlow
 	transition all .5s
-
-$transitionLong
-	transition all 1s
 
 $relativePosition
 	position relative
