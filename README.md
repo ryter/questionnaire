@@ -1,4 +1,5 @@
 # questionnaire
+- use localhost
 - install node.js
 - npm i grunt -g
 - npm i
