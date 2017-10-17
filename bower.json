@@ -20,7 +20,6 @@
     "svg4everybody": "^2.1.9",
     "minimalect": "*",
     "jquery.nicescroll": "^3.7.6",
-    "animatescroll": "^1.0.7",
-    "jquery.scrollex": "^0.2.1"
+    "animatescroll": "^1.0.7"
   }
 }
