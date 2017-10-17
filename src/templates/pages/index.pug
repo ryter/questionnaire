@@ -3,14 +3,14 @@ block content
 	include ../blocks/data.pug
 	include ../blocks/custom-checkbox.pug
 
-	section.top-block
+	section(data-id="information").top-block.form__section
 		.container
 			h1 Анкета
 
 	main.main
 		.container
 			form.form
-				.form__information.form__section.active#information
+				div(data-id="information").form__information.form__section.active#information
 					-
 						var iconId = 'information',
 							titleText = 'Личная информация'
@@ -31,10 +31,10 @@ block content
 					.form-group
 						input(type="text" name="email" id="email")
 						label(for="email") E-mail
-				.form__skills.form__section#skills
+				div(data-id="skills").form__skills.form__section#skills
 					-
 						var iconId = 'skills',
-						titleText = 'Расскажете о своем опыте'
+						titleText = 'Расскажите о своем опыте'
 					include ../blocks/caption-with-icon.pug
 					.skills__col-wrap
 						.skills__col.skills__col_left
@@ -46,7 +46,7 @@ block content
 						.skills__col.skills__col_right
 							each item in rightColCheckboxes
 								+custom-checkbox(item)
-				.form__js.form__section#js
+				div(data-id="js").form__js.form__section#js
 					-
 						var iconId = 'js',
 						titleText = 'Уровень владения JavaScript'
@@ -54,14 +54,20 @@ block content
 
 					.js__skills-level
 						.skills-level__block
-							.level Не владею
-							.level Использую готовые решения
-							.level Использую готовые решения и умею их переделывать
-							.level Пишу сложный JS с нуля
+							table
+								tbody
+									tr
+										td Не владею
+										td
+											| Использую готовые
+											br
+											| решения
+										td Использую готовые решения и умею их переделывать
+										td Пишу сложный JS с нуля
 						.skill-level__range
-							input(type="range").range
+							input(type="range" name="skills-level").range
 
-				.form__about.form__section#about
+				div(data-id="about").form__about.form__section#about
 					-
 						var iconId = 'about',
 						titleText = 'Расскажите о себе'

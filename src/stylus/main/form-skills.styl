@@ -1,5 +1,8 @@
 .form__skills
-	margin-bottom 80px
+	margin-bottom 100px
+
+	.title
+		padding-bottom 20px
 
 	.skills__col-wrap
 		@extend $relativePosition
@@ -8,4 +11,9 @@
 
 	.skills__col
 		float left
-		width calc(100%/3)
+		&:first-child
+			width 36%
+		&:nth-child(2)
+			width 36.5%
+		&:last-child
+			width 27.5%

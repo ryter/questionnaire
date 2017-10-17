@@ -120,6 +120,11 @@ $robotoThin
 $textUppercase
 	text-transform uppercase
 
+$smallerFontSize
+	@media screen and (min-width: 1170px)
+		font-size 13px
+	font-size linear-interpolation((320px 9px) (991px 11px))
+
 $smallFontSize
 	@media screen and (min-width: 1170px)
 		font-size 14px
@@ -129,6 +134,11 @@ $defaultFontSize
 	@media screen and (min-width: 1170px)
 		font-size 16px
 	font-size linear-interpolation((320px 12px) (991px 14px))
+
+$averageFontSize
+	@media screen and (min-width: 1170px)
+		font-size 20px
+	font-size linear-interpolation((320px 12px) (991px 16px))
 
 $mediumFontSize
 	@media screen and (min-width: 1170px)

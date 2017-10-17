@@ -19,9 +19,11 @@
 		li
 			display inline-block
 			&:not(:last-child)
-				margin-right 10%
-		a.active
-			color $blackSignal
+				margin-right 9%
+		a
+			@extend $smallFontSize
+			&.active
+				color red
 
 	.header__menu-btn
 		@extend $cursorPointer

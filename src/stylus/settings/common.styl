@@ -36,9 +36,12 @@ a
 	text-decoration none
 
 input[type="text"],
-textarea,
 select
 	@extend $mediumFontSize
+
+input[type="text"],
+textarea,
+select
 	@extend $robotoRegular
 	@extend $centerText
 	@extend $transitionDefault
@@ -46,7 +49,6 @@ select
 	max-width 520px
 	border 1px solid $gainsborough
 	border-radius 5px
-	//color $brightTelegray
 	color $wetAsphalt
 	&:focus
 		border-color $accentColor
@@ -57,10 +59,19 @@ input[type="text"]
 	padding-top 10px
 
 textarea
-	padding 18px 16px
+	@extend $averageFontSize
+	padding 18px 20px
 	resize none
 	height 180px
 	text-align left
+	&::-webkit-input-placeholder
+		color $brightTelegray
+	&:-moz-placeholder
+		color $brightTelegray
+	&::-moz-placeholder
+		color $brightTelegray
+	&::-ms-input-placeholder
+		color $brightTelegray
 
 .container
 	@extend $relativePosition
@@ -70,11 +81,13 @@ textarea
 	padding 0 15px
 
 .accent-btn
+	@extend $defaultFontSize
 	@extend $cursorPointer
+	font-family inherit
 	background-color $accentColor
 	border-radius 10px
 	color $white
 	height $btnHeight
 	line-height $btnHeight
-	padding 0 30px
+	padding 0 35px
 
