@@ -1,0 +1,35 @@
+.custom-checkbox
+	@extend $relativePosition
+	height 2em
+	line-height 2em
+
+	input[type="checkbox"]
+		visibility hidden
+		&:checked + label:after
+			opacity 1
+
+	.custom-checkbox__flag-block
+		@extend $relativePosition
+		@extend $centerElementY
+		sizeElement(20px, 20px)
+		elementPosition(absolute, 48%, 0)
+		border 1px solid $accentColor
+		border-radius 3px
+		label
+			elementPosition(absolute, 0, 0)
+			sizeElement(100%, 100%)
+			&:after
+				@extend $cursorPointer
+				@extend $pseudoElement
+				@extend $transitionDefault
+				sizeElement(5px, 9px)
+				transform translateX(-50%) rotate(45deg)
+				border 2px solid $accentColor
+				border-left-color $transparent
+				border-top-color $transparent
+				top 0
+				left 50%
+				opacity 0
+
+	.custom-checkbox__label
+		padding-left 2.4em

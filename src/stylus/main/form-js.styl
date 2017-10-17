@@ -1,0 +1,57 @@
+.form__js
+	margin-bottom 50px
+	height 400px
+
+	.skill-level__range
+		@extend $relativePosition
+		top -14px
+
+	.skills-level__block
+		@extend $relativePosition
+		transform rotate(-1deg)
+		overflow hidden
+		z-index 2
+		background-color $white
+		white-space nowrap
+
+	.level
+		@extend $relativePosition
+		@extend $smallFontSize
+		display inline-block
+		vertical-align bottom
+		width 24.2%
+		margin-bottom 20px
+		transform rotate(1deg)
+		white-space normal
+		&:not(:last-child),
+		&:last-child
+			&:before
+				@extend $pseudoElement
+				sizeElement(1px, 100%)
+				top 100%
+		&:not(:last-child)
+			padding-right 8px
+			&:before
+				left 0
+				border-left 2px dotted $gainsborough
+		&:last-child
+			text-align right
+			&:before
+				right 0
+				border-right 2px dotted $gainsborough
+
+	.slider
+		&.slider-horizontal
+			sizeElement(98.4%, 16px)
+			margin-left 1px
+			.slider-track
+				background-image none
+				background-color #e8e8e8
+				box-shadow none
+				border-radius 0
+				height 16px;
+
+	.slider-selection
+		box-shadow none
+		border-radius 0
+		background-image linear-gradient(to right, #c7aeee, #8986c3)

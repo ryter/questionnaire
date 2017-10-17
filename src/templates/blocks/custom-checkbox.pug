@@ -1,0 +1,6 @@
+mixin custom-checkbox(item)
+	.custom-checkbox
+		.custom-checkbox__flag-block
+			input(type="checkbox" name=item.inputName id=item.inputName)
+			label(for=item.inputName)
+		label(for=item.inputName).custom-checkbox__label #{item.labelText}

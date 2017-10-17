@@ -1,0 +1,21 @@
+.form__information
+	margin-bottom 40px
+
+	.form-group
+		@extend $relativePosition
+		@extend $centerText
+		margin-bottom 25px
+		&.change
+			label
+				@extend $smallFontSize
+				top 20%
+
+		label
+			@extend $mediumFontSize
+			@extend $robotoRegular
+			@extend $centerElement
+			@extend $transitionDefault
+			elementPosition(absolute, 50%, 50%)
+			color $brightTelegray
+			display block
+			white-space nowrap

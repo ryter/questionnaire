@@ -1,0 +1,11 @@
+.idea
+node_modules
+/assets/css/
+/tmp/
+/assets/js/
+/assets/vendor/
+*.html
+/validation.xml
+/validation-report.json
+/validation-status.json
+/assets/images/icons-sprite.svg

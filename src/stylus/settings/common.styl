@@ -1,0 +1,80 @@
+*
+	box-sizing border-box
+	margin 0
+	padding 0
+	outline none
+	border none
+	list-style-type none
+
+body
+	font-family "Roboto-Light", sans-serif
+	@extend $defaultFontSize
+	background-color $white
+	line-height 1.5
+	color $blackGraphite
+	padding-top $headerHeight
+	@media screen and (max-width: 767px)
+		padding-top $headerMobileHeight
+	&.menu-open
+		overflow-y hidden
+		.header .header__nav
+			transform translateY(0)
+
+h1
+	@extend $bigFontSize
+	@extend $robotoThin
+
+h2
+	@extend $middleFontSize
+
+h1, h2, h3, h4, h5, h6
+	font-weight normal
+
+a
+	@extend $transitionDefault
+	color $blue
+	text-decoration none
+
+input[type="text"],
+textarea,
+select
+	@extend $mediumFontSize
+	@extend $robotoRegular
+	@extend $centerText
+	@extend $transitionDefault
+	width 100%
+	max-width 520px
+	border 1px solid $gainsborough
+	border-radius 5px
+	//color $brightTelegray
+	color $wetAsphalt
+	&:focus
+		border-color $accentColor
+
+input[type="text"]
+	height $inputHeight
+	line-height 'calc(%s - 10px)' %s = $inputHeight
+	padding-top 10px
+
+textarea
+	padding 18px 16px
+	resize none
+	height 180px
+	text-align left
+
+.container
+	@extend $relativePosition
+	@extend $centerElementMargin
+	sizeElement(95%, 100%)
+	max-width 798px
+	padding 0 15px
+
+.accent-btn
+	@extend $cursorPointer
+	background-color $accentColor
+	border-radius 10px
+	color $white
+	height $btnHeight
+	line-height $btnHeight
+	padding 0 30px
+

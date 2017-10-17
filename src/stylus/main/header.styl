@@ -1,0 +1,66 @@
+.header
+	sizeElement(100%, $headerHeight)
+	elementPosition(fixed, 0, 0)
+	border-bottom 1px solid $grayLight
+	background-color $white
+	z-index 10
+
+	.header__nav-cover
+		elementPosition(absolute, 0, 0)
+		sizeElement(100%, 100%)
+		display none
+		background-color $white
+		z-index 3
+
+	.header__nav
+		@extend $transitionSlow
+		@extend $centerText
+		line-height $headerHeight
+		li
+			display inline-block
+			&:not(:last-child)
+				margin-right 10%
+		a.active
+			color $blackSignal
+
+	.header__menu-btn
+		@extend $cursorPointer
+		@extend $centerElementY
+		sizeElement(40px, 30px)
+		position absolute
+		top 50%
+		right 15px
+		display none
+		z-index 4
+		span
+			@extend $relativePosition
+			top 13px
+			&:after
+				content: '';
+				position: absolute;
+				top: 10px;
+			&:before
+				content: '';
+				position: absolute;
+				top: -10px;
+		span,
+		span:before,
+		span:after
+			display: block;
+			width: 100%;
+			height: 6px;
+			background-color $accentColor
+			border-radius: 4px;
+			transition: all .3s ease;
+		&.active
+			span
+				background-color $transparent
+				&:after
+					transform: rotate(-45deg);
+					top: 0;
+				&:before
+					transform: rotate(45deg);
+					top: 0;
+
+
+

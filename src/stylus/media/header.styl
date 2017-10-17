@@ -1,0 +1,25 @@
+.header
+	@media screen and (max-width: 767px)
+		height $headerMobileHeight
+
+		.header__nav-cover
+			display block
+
+		.container
+			position static
+
+		.header__nav
+			elementPosition(absolute, $headerMobileHeight, 0)
+			width 100%
+			background-color $white
+			line-height $headerMobileHeight
+			z-index 2
+			transform translateY(-100%)
+			li
+				display block
+				line-height 40px
+				&:not(:last-child)
+					margin-right 0
+
+		.header__menu-btn
+			display block

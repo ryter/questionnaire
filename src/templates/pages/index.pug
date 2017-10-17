@@ -1,0 +1,74 @@
+extends ../blocks/default.pug
+block content
+	include ../blocks/data.pug
+	include ../blocks/custom-checkbox.pug
+
+	section.top-block
+		.container
+			h1 Анкета
+
+	main.main
+		.container
+			form.form
+				.form__information.form__section.active#information
+					-
+						var iconId = 'information',
+							titleText = 'Личная информация'
+					include ../blocks/caption-with-icon.pug
+					.form-group
+						input(type="text" name="name" id="name")
+						label(for="name") ФИО
+					.form-group
+						select(name="birth-year")
+							each item in years
+								option(value=item)= item
+					.form-group
+						input(type="text" name="domicile" id="domicile")
+						label(for="domicile") Место проживания
+					.form-group
+						input(type="text" name="skype" id="skype")
+						label(for="skype") Skype
+					.form-group
+						input(type="text" name="email" id="email")
+						label(for="email") E-mail
+				.form__skills.form__section#skills
+					-
+						var iconId = 'skills',
+						titleText = 'Расскажете о своем опыте'
+					include ../blocks/caption-with-icon.pug
+					.skills__col-wrap
+						.skills__col.skills__col_left
+							each item in leftColCheckboxes
+								+custom-checkbox(item)
+						.skills__col.skills__col_center
+							each item in centerColCheckboxes
+								+custom-checkbox(item)
+						.skills__col.skills__col_right
+							each item in rightColCheckboxes
+								+custom-checkbox(item)
+				.form__js.form__section#js
+					-
+						var iconId = 'js',
+						titleText = 'Уровень владения JavaScript'
+					include ../blocks/caption-with-icon.pug
+
+					.js__skills-level
+						.skills-level__block
+							.level Не владею
+							.level Использую готовые решения
+							.level Использую готовые решения и умею их переделывать
+							.level Пишу сложный JS с нуля
+						.skill-level__range
+							input(type="range").range
+
+				.form__about.form__section#about
+					-
+						var iconId = 'about',
+						titleText = 'Расскажите о себе'
+					include ../blocks/caption-with-icon.pug
+
+					p.about__text Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+					textarea(name="about" placeholder="Понравилась тем, что ..." maxlength="200").about__textarea
+
+				footer.form__footer
+					button(type="submit").accent-btn Готово

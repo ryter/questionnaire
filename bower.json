@@ -1,0 +1,26 @@
+{
+  "name": "questionnaire",
+  "description": "",
+  "main": "",
+  "authors": [
+    "sveta4acova <sshurlachakova@oneclickdev.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "svg4everybody": "^2.1.9",
+    "minimalect": "*",
+    "jquery.nicescroll": "^3.7.6",
+    "animatescroll": "^1.0.7",
+    "jquery.scrollex": "^0.2.1"
+  }
+}

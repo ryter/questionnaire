@@ -1,0 +1,161 @@
+//color variables
+$accentColor = #435993
+$blackSemi = rgba(0, 0, 0, .5)
+$blackSignal = #2b2b2b
+$blackGraphite = #1c1c1c
+$white = #fff
+$semiWhite =  rgba(255, 255, 255, .5)
+$grayLight = #d9d9d9
+$brightTelegray = #c8c8c8
+$gainsborough = #E5E5E5
+$blue = #50649a
+$wetAsphalt = #494949
+$transparent = transparent
+
+
+//numeric variables
+$headerHeight = 80px
+$headerMobileHeight = 60px
+$inputHeight = 60px
+$topBlockHeight = 180px
+$btnHeight = 50px
+
+//mixins
+elementPosition(position, top, left)
+	position position
+	top top
+	left left
+
+sizeElement(width, height)
+	width width
+	height height
+
+linear-interpolation($map)
+	if (length(keys($map)) != 2)
+		error('Map must have exactly 2 values.')
+	$keys   = keys($map)
+	$values = values($map)
+	$max-width = unit(pop($keys), '')
+	$max-size  = unit(pop($values), '')
+	$min-width = unit(pop($keys), '')
+	$min-size  = unit(pop($values), '')
+	$slope       = unit(($max-size - $min-size) / ($max-width - $min-width), '')
+	$y-intercept = $min-size - $slope * $min-width
+	$sign = \+
+	if $y-intercept < 0
+		$sign = \-
+		$y-intercept = abs($y-intercept)
+	unquote('calc(' + unit($slope * 100, vw) + ' ' + $sign + ' ' + unit($y-intercept, px) + ')')
+
+//extends
+$blocksPadding
+	padding 70px 0
+	@media screen and (max-width: 1024px)
+		padding 35px
+
+$blackShadow
+	content ''
+	display block
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color $semiBlack
+
+$accentBtn
+	display inline-block
+	border 1px solid $accentColor
+	color $accentColor
+	text-transform uppercase
+	font-weight bold
+	background-color transparent
+	white-space nowrap
+	padding 10px
+	transition all .5s
+	&:hover
+		background-color $accentColor
+		color $white
+
+$clearBoth
+	content ''
+	display block
+	clear both
+
+$pseudoElement
+	content ''
+	display block
+	position absolute
+
+$backgroundPosition
+	background-size cover
+	background-position center
+
+$absoluteElementPosition
+	position absolute
+	top 50%
+	left 50%
+
+$centerElement
+	transform translate(-50%, -50%)
+
+$centerElementY
+	transform translateY(-50%)
+
+$centerElementX
+	transform translateX(-50%)
+
+$centerElementMargin
+	margin 0 auto
+
+$centerText
+	text-align center
+
+$robotoRegular
+	font-family "Roboto-Regular"
+
+$robotoThin
+	font-family "Roboto-Thin"
+
+$textUppercase
+	text-transform uppercase
+
+$smallFontSize
+	@media screen and (min-width: 1170px)
+		font-size 14px
+	font-size linear-interpolation((320px 10px) (991px 12px))
+
+$defaultFontSize
+	@media screen and (min-width: 1170px)
+		font-size 16px
+	font-size linear-interpolation((320px 12px) (991px 14px))
+
+$mediumFontSize
+	@media screen and (min-width: 1170px)
+		font-size 24px
+	font-size linear-interpolation((320px 14px) (991px 20px))
+
+$middleFontSize
+	@media screen and (min-width: 1170px)
+		font-size 30px
+	font-size linear-interpolation((320px 22px) (991px 26px))
+
+$bigFontSize
+	@media screen and (min-width: 1170px)
+		font-size 70px
+	font-size linear-interpolation((320px 54px) (991px 62px))
+
+$transitionDefault
+	transition all .3s
+
+$transitionSlow
+	transition all .5s
+
+$transitionLong
+	transition all 1s
+
+$relativePosition
+	position relative
+
+$cursorPointer
+	cursor pointer

@@ -1,0 +1,18 @@
+.top-block
+	@extend $relativePosition
+	height $topBlockHeight
+	background url(../images/bg-top.jpg) no-repeat 50% 0
+	background-size cover
+	margin-bottom 50px
+	&:after
+		@extend $pseudoElement
+		sizeElement(100%, 80%)
+		bottom 0
+		left 0
+		background linear-gradient(to top, $white, rgba(255,255,255,0))
+
+	h1
+		@extend $centerElement
+		elementPosition(absolute, 100%, 50%)
+		z-index 2
+
