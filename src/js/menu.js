@@ -21,7 +21,7 @@ $(function(){
 		});
 	});
 
-	//кнопка открытия/закрытия
+	//кнопка открытия/закрытия моб.меню
 	$headerMenuBtn.click(function(){
 		$(this).toggleClass('active');
 		$body.toggleClass('menu-open');

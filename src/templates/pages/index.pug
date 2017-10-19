@@ -3,14 +3,14 @@ block content
 	include ../blocks/data.pug
 	include ../blocks/custom-checkbox.pug
 
-	section(data-id="information").top-block.form__section
+	section.top-block
 		.container
 			h1 Анкета
 
 	main.main
 		.container
 			form.form
-				div(data-id="information").form__information.form__section.active#information
+				div.form__information.active#information
 					-
 						var iconId = 'information',
 							titleText = 'Личная информация'
@@ -31,7 +31,7 @@ block content
 					.form-group
 						input(type="text" name="email" id="email")
 						label(for="email") E-mail
-				div(data-id="skills").form__skills.form__section#skills
+				div.form__skills#skills
 					-
 						var iconId = 'skills',
 						titleText = 'Расскажите о своем опыте'
@@ -46,7 +46,7 @@ block content
 						.skills__col.skills__col_right
 							each item in rightColCheckboxes
 								+custom-checkbox(item)
-				div(data-id="js").form__js.form__section#js
+				div.form__js#js
 					-
 						var iconId = 'js',
 						titleText = 'Уровень владения JavaScript'
@@ -67,7 +67,7 @@ block content
 						.skill-level__range
 							input(type="range" name="skills-level").range
 
-				div(data-id="about").form__about.form__section#about
+				div.form__about#about
 					-
 						var iconId = 'about',
 						titleText = 'Расскажите о себе'
