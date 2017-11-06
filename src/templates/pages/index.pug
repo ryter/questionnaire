@@ -5,7 +5,7 @@ block content
 
 	section.top-block
 		.container
-			h1 Анкета
+			h1 Анкета кандидата
 
 	main.main
 		.container
@@ -13,7 +13,7 @@ block content
 				div.form__information.active#information
 					-
 						var iconId = 'information',
-							titleText = 'Личная информация'
+							titleText = 'Контактные данные'
 					include ../blocks/caption-with-icon.pug
 					.form-group
 						input(type="text" name="name" id="name")
@@ -34,7 +34,7 @@ block content
 				div.form__skills#skills
 					-
 						var iconId = 'skills',
-						titleText = 'Расскажите о своем опыте'
+						titleText = 'Навыки'
 					include ../blocks/caption-with-icon.pug
 					.skills__col-wrap
 						.skills__col.skills__col_left
@@ -62,7 +62,7 @@ block content
 											| Использую готовые
 											br
 											| решения
-										td Использую готовые решения и умею их переделывать
+										td Использую готовые решения и умею их дорабатывать
 										td Пишу сложный JS с нуля
 						.skill-level__range
 							input(type="range" name="skills-level").range
@@ -70,10 +70,10 @@ block content
 				div.form__about#about
 					-
 						var iconId = 'about',
-						titleText = 'Расскажите о себе'
+						titleText = 'Дополнительная информация'
 					include ../blocks/caption-with-icon.pug
 
-					p.about__text Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+					p.about__text Напишите несколько предложений, чем привлекла наша вакансия и что Вы ожидаете от работы у нас.
 					textarea(name="about" placeholder="Понравилась тем, что ..." maxlength="200").about__textarea
 
 				footer.form__footer

@@ -49,15 +49,17 @@ select
 	max-width 520px
 	border 1px solid $gainsborough
 	border-radius 5px
-	color $brightTelegray
+	color $wetAsphalt
 	&:focus
 		border-color $accentColor
-		color $wetAsphalt
 
 input[type="text"]
 	height $inputHeight
 	line-height 'calc(%s - 10px)' %s = $inputHeight
 	padding-top 10px
+	@media screen and (max-width: 767px)
+		height $inputHeightMobile
+		line-height 'calc(%s - 10px)' %s = $inputHeightMobile
 
 textarea
 	@extend $averageFontSize
