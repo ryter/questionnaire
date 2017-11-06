@@ -23,13 +23,4 @@ $(function(){
 		cursorcolor:"#d9d9d9",
 		cursorwidth: "4px"
 	});
-
-	//слайдер навыков js
-	$('.range').slider({
-		value: 5,
-		step: 0.01,
-		min: 0,
-		max: 10,
-		tooltip: 'hide'
-	});
 });

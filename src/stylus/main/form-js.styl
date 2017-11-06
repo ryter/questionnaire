@@ -76,11 +76,13 @@
 				height 16px;
 
 	.slider-selection
+		transition width .3s linear
 		box-shadow none
 		border-radius 0
 		background-image linear-gradient(to right, #c7aeee, #8986c3)
 
 	.slider-handle
+		transition left .3s linear
 		@extend $cursorPointer
 		sizeElement(22px, 22px)
 		top 25px

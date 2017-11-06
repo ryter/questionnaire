@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			dist: {
-				src: ['src/js/svg-polyfil.js', 'src/js/common.js', 'src/js/menu.js', 'src/js/scroll.js'],
+				src: ['src/js/svg-polyfil.js', 'src/js/common.js', 'src/js/menu.js', 'src/js/scroll.js', 'src/js/slider.js'],
 				dest: 'assets/js/main.js'
 			}
 		},
