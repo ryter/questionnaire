@@ -21,6 +21,9 @@ $(function(){
 		});
 	});
 
+	//заполнение моб.меню ссылками
+	$('.header__nav').clone().appendTo('.mobile-menu');
+
 	//кнопка открытия/закрытия моб.меню
 	$headerMenuBtn.click(function(){
 		$(this).toggleClass('active');

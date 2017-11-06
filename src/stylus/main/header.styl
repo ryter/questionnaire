@@ -11,13 +11,6 @@
 		bottom 0
 		z-index 10
 
-	.header__nav-cover
-		elementPosition(absolute, 0, 0)
-		sizeElement(100%, 100%)
-		display none
-		background-color $white
-		z-index 3
-
 	.header__nav
 		@extend $transitionSlow
 		@extend $centerText
@@ -61,14 +54,18 @@
 			border-radius: 4px;
 			transition: all .3s ease;
 		&.active
+			z-index 12
 			span
 				background-color $transparent
-				&:after
-					transform: rotate(-45deg);
-					top: 0;
+				&:after,
 				&:before
-					transform: rotate(45deg);
-					top: 0;
+					background-color $accentColor
+					top 0
+				&:after
+					transform rotate(-45deg)
+				&:before
+					transform rotate(45deg)
+
 
 
 
