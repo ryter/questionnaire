@@ -1,6 +1,6 @@
 $(function(){
 	var $body = $('body'),
-		$headerMenuBtn = $('.header__menu-btn');
+		$mobileMenuBtn = $('.mobile-menu-btn');
 
 	//анимация перехода от ссылок-якорей к целевым елементам
 	$(document).on('click', '.scroll-to-element', function(){
@@ -11,7 +11,7 @@ $(function(){
 		$this.addClass('active');
 
 		if($body.hasClass('menu-open')){
-			$headerMenuBtn.removeClass('active');
+			$mobileMenuBtn.removeClass('active');
 			$body.removeClass('menu-open');
 		}
 
@@ -25,7 +25,7 @@ $(function(){
 	$('.header__nav').clone().appendTo('.mobile-menu');
 
 	//кнопка открытия/закрытия моб.меню
-	$headerMenuBtn.click(function(){
+	$mobileMenuBtn.click(function(){
 		$(this).toggleClass('active');
 		$body.toggleClass('menu-open');
 	});
